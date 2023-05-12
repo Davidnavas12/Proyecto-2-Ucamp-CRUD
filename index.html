@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="left-nav">
+          <h1>Contact List</h1>
+        </div>
+        <div class="right-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#">About Us</a>
+              <div class="dropdown-content">
+                <a href="#">Contact Information</a>
+                <a href="#">Locations</a>
+                <a href="#">References</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <article>
+        <nav>
+          <form id="formularioContacto">
+            <ul>
+              <li>
+                <label for="nombre"
+                  >Nombre: <br />
+                  <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingresa el nombre en este campo"
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="apellido"
+                  >Apellido: <br />
+                  <input
+                    type="text"
+                    id="apellido"
+                    placeholder="Ingresa el apellido en este campo"
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="telefono"
+                  >Número de teléfono: <br />
+                  <input
+                    type="number"
+                    id="telefono"
+                    placeholder="Ingresa el núm de teléfono en este campo"
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="correo"
+                  >Correo electrónico: <br />
+                  <input
+                    type="email"
+                    id="correo"
+                    placeholder="Ingresa el correo electrónico en este campo"
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="empresa"
+                  >Empresa: <br />
+                  <input
+                    type="text"
+                    id="empresa"
+                    placeholder="Ingresa la empresa donde trabaja el contacto"
+                  />
+                </label>
+              </li>
+              <li><input type='submit' value="Agregar" /></li>
+            </ul>
+          </form>
+        </nav>
+        <section>
+          <ul id="listaDeContactos"></ul>   
+        </section>
+      </article>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>Options</li>
+            <li>FAQs</li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

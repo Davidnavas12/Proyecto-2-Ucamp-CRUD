@@ -1,0 +1,244 @@
+body {
+    background: rgb(194,194,194);
+    background: linear-gradient(270deg, rgba(194,194,194,1) 0%, rgba(255,255,255,1) 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(4deg, rgba(0,0,0,1) 0%, rgba(200,216,217,1) 35%, rgba(255,255,255,1) 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .left-nav {
+
+
+    margin-left: 0.2rem;
+  }
+  
+  .right-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-nav li {
+    margin-right: 20px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+
+article {
+    background-image: url(./images/australia-melbourne-skyscrapers-\ nature-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    padding: 1%;
+}
+
+main form {
+    background: rgb(60,60,60);
+    background: linear-gradient(4deg, rgba(60,60,60,1) 0%, rgba(94,94,94,1) 24%, rgba(159,158,158,1) 43%, rgba(24,24,24,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(235, 244, 255) !important;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1%;
+    display: table
+    
+}
+
+main form ul {
+    display: inline-block;
+    padding: 0%;
+    content: normal;
+    margin: 1.25rem;
+
+}
+
+main form li {
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+main form [type="submit"] {
+    width: 9rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+input {
+  padding: .3rem;
+  font-size: .8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 18rem;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input[type="submit"]
+ {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 18rem;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background-color: #337a37;
+}
+
+
+
+
+#listaDeContactos {
+    display:inline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    opacity: 200;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: rgb(140,140,140);
+    background: linear-gradient(4deg, rgba(140,140,140,1) 0%, rgba(212,212,212,1) 35%, rgba(255,255,255,1) 100%);
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-size: medium !important
+    
+  }
+  
+  tr:hover {
+    background-color: #d1d1d1;
+    font-size: 115%;
+    font-weight: 100;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .edit-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+
+  .edit-button:hover,
+.delete-button:hover {
+  background-color: #333;
+  color: rgb(0, 190, 174);
+
+}
+
+.edit-button:active,
+.delete-button:active {
+  transform: scale(0.95);
+}
+  
+.editing {
+  color: rgb(255, 157, 0);
+  background-color: rgb(255, 248, 240);  
+  font-weight: bold;
+  font-style: unset;
+}
+
+
+
+
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
