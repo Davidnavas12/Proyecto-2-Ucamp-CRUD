@@ -1,6 +1,7 @@
 console.log("Hello, World!");
 
-const agenda = [
+let agenda = localStorage.getItem('agenda');
+agenda = agenda ? JSON.parse(agenda) : [
   {
     nombre: "Pedro",
     apellido: "Suarez",
@@ -68,6 +69,9 @@ formContacto.addEventListener("submit", function (event) {
       correo: inputCorreo.value,
       empresa: inputEmpresa.value
     });
+
+    localStorage.setItem("agenda", JSON.stringify(agenda));
+
     renderlistaDeContactos ()
   }
 });
@@ -97,20 +101,20 @@ function renderlistaDeContactos() {
     agenda.forEach((contact, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td class="nombre-cell">${contact.nombre} ${contact.apellido}</td>
-        <td class="telefono-cell">${contact.telefono}</td>
-        <td class="correo-cell">${contact.correo}</td>
-        <td class="empresa-cell">${contact.empresa}</td>
-        <td><button class="edit-button" data-index="${index}">Editar</button></td>
-        <td><button class="delete-button" data-index="${index}">Eliminar</button></td>
-      `;
+      <td class="nombre-cell">${contact.nombre} ${contact.apellido}</td>
+      <td class="telefono-cell justify-cell">${contact.telefono}</td>
+      <td class="correo-cell justify-cell">${contact.correo}</td>
+      <td class="empresa-cell justify-cell">${contact.empresa}</td>
+      <td><button class="edit-button" data-index="${index}">Editar</button></td>
+      <td><button class="delete-button" data-index="${index}">Eliminar</button></td>
+    `;
+    
       tbody.appendChild(row);
     });
     table.appendChild(tbody);
   
 
     contactList.appendChild(table);
-  
 
     const editButtons = document.querySelectorAll(".edit-button");
     editButtons.forEach(button => {
@@ -123,7 +127,7 @@ function renderlistaDeContactos() {
     });
   }
   
-renderlistaDeContactos();
+
 
 function handleEditContact(event) {
     const index = event.target.dataset.index;
@@ -168,6 +172,8 @@ function handleEditContact(event) {
     saveButton.textContent = "Editar";
     saveButton.removeEventListener("click", handleSaveContact);
     saveButton.addEventListener("click", handleEditContact);
+
+    localStorage.setItem('agenda', JSON.stringify(agenda));
   }
     
   function handleDeleteContact(event) {
@@ -176,5 +182,9 @@ function handleEditContact(event) {
   
     const row = event.target.parentNode.parentNode;
     row.remove();
+
+    localStorage.setItem("agenda", JSON.stringify(agenda));
   }
+
+  renderlistaDeContactos();
 
